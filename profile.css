@@ -1,104 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800&display=swap');
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  font-family: 'Montserrat';
 }
 
 body {
-  background-color: #e5e5e5;
-  font-family: 'Arial', sans-serif;
-  color: #333333;
-  line-height: 1.6;
-  padding: 40px 20px;
+  margin: 0px;
+  padding: 0px;
+  min-width: fit-content;
+}
+
+.mainbox {
+  width: 610px;
+  padding: 30px;
+  margin: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 1px soild black;
+  box-shadow: 0 1px 20px 0 reba(0, 0, 0, 0.2);
 }
 
 section {
-  max-width: 800px;
-  margin: 0 auto 30px;
-  background-color: #f8f8f8;
-  border-radius: 20px;
-  padding: 25px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 24px;
 }
 
-.info {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.info-content {
-  flex: 1;
-}
-
-.info-content h1 {
-  font-size: 32px;
-  color: #444444;
-  margin-bottom: 15px;
-}
-
-.info-content p {
-  font-size: 18px;
-}
-
-.info-image img {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 5px solid #cfcfcf;
+h1 {
+  margin: 0px;
+  padding: 0px;
+  font-size: 36px;
+  font-weight: bold;
+  font-style: italic;
+  margin-bottom: 8px;
+  text-align: right;
 }
 
 h2 {
-  font-size: 28px;
-  color: #444444;
-  margin-bottom: 20px;
-  text-align: center;
+  margin: 0px;
+  padding: 0px;
+  font-size: 20px;
+  color: #2aad3c;
+  font-weight: 400;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #3d3c3c;
+  padding-bottom: 5px;
 }
 
+.profile {
+  width: 100px;
+  height: 100px;
+  border-radius: 20%;
+  float: left;
+}
+
+.title {
+  font-size: 16px;
+  color: #7c7c7c;
+  font-weight: bold;
+  float: right;
+  line-height: 16px;
+}
+
+/* 여기서부터는 ai참고했습니다 */
 .hobby-image,
-.food-image {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
+.food-image,
+.ott-image {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 
 .hobby-image img,
-.food-image img {
-  width: 220px;
-  height: 160px;
+.food-image img,
+.ott-image img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
-  border-radius: 15px;
-  border: 4px solid #cfcfcf;
-}
-
-.hobby-content p,
-.food-content p {
-  font-size: 17px;
-  text-align: center;
-  background-color: #ededed;
-  padding: 15px;
-  border-radius: 15px;
-}
-
-@media (max-width: 768px) {
-  .info {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .info-image img {
-    width: 150px;
-    height: 150px;
-  }
-
-  .hobby-image img,
-  .food-image img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-  }
+  display: block;
 }
